@@ -3,6 +3,7 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { BrowserRouter } from 'react-router-dom';
 import App from './App.jsx';
 
 // 🧼 Global styles first!
@@ -24,5 +25,7 @@ import './styles/theme-effects.css';
 
 // 🌟 Render the app!
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <App />
+  <BrowserRouter basename="/mahak">
+    <App />
+  </BrowserRouter>
 );
