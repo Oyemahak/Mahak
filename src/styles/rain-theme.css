@@ -1,6 +1,9 @@
-/* ================================================== */
-/*             🌧️ RAIN THEME - WET & WILD            */
-/* ================================================== */
+/* 🌧️ RAIN THEME - WET & WILD */
+
+/* === Background: Moody Rain Sky === */
+.rain-theme {
+  background: linear-gradient(to bottom, #1e293b, #0f172a);
+}
 
 /* === Water Drop Inputs + Rain Emoji === */
 .rain-theme input,
@@ -21,7 +24,6 @@
   animation: rainRipple 0.5s ease-out;
 }
 
-/* === Ripple Effect on Focus === */
 @keyframes rainRipple {
   0% {
     box-shadow: 0 0 0 0 rgba(174, 194, 224, 0.4);
@@ -29,11 +31,6 @@
   100% {
     box-shadow: 0 0 0 8px transparent;
   }
-}
-
-/* === Background: Moody Rain Sky === */
-.rain-theme {
-  background: linear-gradient(to bottom, #1e293b, #0f172a);
 }
 
 /* === Resume Button Lightning Hover Effect === */
@@ -50,33 +47,20 @@
 }
 
 @keyframes lightningFlash {
-  0% {
-    opacity: 0;
-    transform: translateY(-100%) rotate(45deg);
-  }
-  10% {
-    opacity: 0.8;
-  }
-  20% {
-    opacity: 0;
-  }
-  30% {
-    opacity: 0.6;
-  }
-  40% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0;
-  }
+  0% { opacity: 0; transform: translateY(-100%) rotate(45deg); }
+  10% { opacity: 0.8; }
+  20% { opacity: 0; }
+  30% { opacity: 0.6; }
+  40% { opacity: 0; }
+  100% { opacity: 0; }
 }
 
-/* === Raindrop Animation (Falling Lines) === */
+/* === Raindrops === */
 .raindrop {
   position: fixed;
   width: 2px;
   background: linear-gradient(to bottom, transparent, rgba(174, 194, 224, 0.6));
-  animation: rain linear infinite;
+  animation: rain 1.5s linear infinite;
   pointer-events: none;
   z-index: -1;
 }
@@ -87,7 +71,7 @@
   }
 }
 
-/* === Ripple Impact on Ground === */
+/* === Ripple on Ground === */
 .ripple {
   position: fixed;
   border-radius: 50%;

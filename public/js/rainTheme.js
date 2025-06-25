@@ -2,6 +2,7 @@
 export function initRainTheme() {
   createRain();       // 🌧️
   createLightning();  // ⚡
+  setupLightningHover(); // ⛈️
 }
 
 function createRain() {
@@ -14,6 +15,7 @@ function createRain() {
     raindrop.style.animationDuration = `${1 + Math.random() * 1.5}s`;
     document.body.appendChild(raindrop);
 
+    // Add ripple effect after raindrop reaches the ground
     if (i % 5 === 0) {
       setTimeout(() => {
         const ripple = document.createElement('div');
@@ -32,4 +34,28 @@ function createLightning() {
   const lightning = document.createElement('div');
   lightning.className = 'lightning';
   document.body.appendChild(lightning);
+}
+
+function setupLightningHover() {
+  const resumeBtn = document.querySelector('.resume-button');
+  const lightning = document.querySelector('.lightning');
+
+  if (!resumeBtn || !lightning) return;
+
+  resumeBtn.addEventListener('mouseenter', () => {
+    lightning.style.opacity = '0.9';
+    lightning.style.transition = 'none';
+    setTimeout(() => {
+      lightning.style.opacity = '0';
+      lightning.style.transition = 'opacity 0.3s';
+    }, 50);
+    setTimeout(() => {
+      lightning.style.opacity = '0.6';
+      lightning.style.transition = 'none';
+      setTimeout(() => {
+        lightning.style.opacity = '0';
+        lightning.style.transition = 'opacity 0.3s';
+      }, 100);
+    }, 200);
+  });
 }
