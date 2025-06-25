@@ -38,7 +38,9 @@ const Projects = () => {
   return (
     <section id="projects">
       <div className="projects-header-centered">
-        <h2 id="projects-title">Featured UX Projects</h2>
+        <h2 id="projects-title">
+          {activeTab === 'ux' ? 'Featured UX Projects' : 'Featured Web Dev Projects'}
+        </h2>
         <div className="project-toggle">
           <button
             className={`tab-toggle ${activeTab === "ux" ? "active" : ""}`}
