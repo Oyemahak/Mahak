@@ -1,49 +1,42 @@
 // Navbar.jsx — Handles site navigation and theme switching ✨
 
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
 import '../styles/global.css';
 
-// ✅ Directly import the logo so it works in both local and GitHub Pages
+// ✅ Direct import of logo to ensure it works in both local & GitHub Pages
 import logo from '../assets/images/logo.png';
 
 const Navbar = () => {
   const location = useLocation();
-  const navigate = useNavigate();
 
+  // ✅ Apply saved theme on load
   useEffect(() => {
     const savedTheme = localStorage.getItem('portfolio-theme') || 'default';
     document.body.className = `${savedTheme}-theme`;
   }, []);
 
+  // ✅ Scroll to contact section already present on the current page
   const handleContactClick = () => {
-    if (location.pathname === '/') {
-      // Already on home — scroll smoothly
-      setTimeout(() => {
-        const contact = document.getElementById('contact');
-        if (contact) contact.scrollIntoView({ behavior: 'smooth' });
-      }, 100);
-    } else {
-      // Navigate to home, then scroll
-      navigate('/');
-      setTimeout(() => {
-        const contact = document.getElementById('contact');
-        if (contact) contact.scrollIntoView({ behavior: 'smooth' });
-      }, 300); // slight delay so home can render first
-    }
+    setTimeout(() => {
+      const contactSection = document.getElementById('contact');
+      if (contactSection) {
+        contactSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    }, 100); // slight delay in case of rendering
   };
 
   return (
     <header>
       <div className="header-grid">
-        {/* Logo Column */}
+        {/* 🔗 Logo */}
         <div className="header-col logo-col">
           <Link to="/">
             <img className="logo" src={logo} alt="Mahak Patel logo" />
           </Link>
         </div>
 
-        {/* Theme Switcher */}
+        {/* 🎨 Theme Switcher Buttons */}
         <div className="header-col role-col">
           <div className="theme-switcher">
             <button className="theme-btn" data-theme="default" aria-label="Default Theme">
@@ -61,7 +54,7 @@ const Navbar = () => {
           </div>
         </div>
 
-        {/* Desktop Nav Links */}
+        {/* 🌐 Navigation */}
         <div className="header-col nav-col">
           <nav>
             <ul className="desktop-menu">
@@ -69,15 +62,19 @@ const Navbar = () => {
                 <Link to="/" className={location.pathname === '/' ? 'active' : ''}>Home</Link>
                 <span className="tooltiptext-bottom">Back to home. Safe and sound.</span>
               </li>
+
               <li className="tooltip-bottom">
-                <Link to="/play">Play</Link>
+                <Link to="/play" className={location.pathname === '/play' ? 'active' : ''}>Play</Link>
                 <span className="tooltiptext-bottom">My creative playground!</span>
               </li>
+
               <li className="tooltip-bottom">
-                <Link to="/about">About</Link>
+                <Link to="/about" className={location.pathname === '/about' ? 'active' : ''}>About</Link>
                 <span className="tooltiptext-bottom">Who’s behind this magic?</span>
               </li>
+
               <li className="tooltip-bottom">
+                {/* ✅ Scroll to local #contact, don't navigate away */}
                 <button className="contact-link-btn" onClick={handleContactClick}>
                   Contact
                 </button>
@@ -85,7 +82,7 @@ const Navbar = () => {
               </li>
             </ul>
 
-            {/* Hamburger Icon for Mobile */}
+            {/* 📱 Mobile Nav Icon */}
             <div className="mobile-menu-icon">
               <i className="fas fa-bars"></i>
             </div>
