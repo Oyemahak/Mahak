@@ -1,6 +1,11 @@
+// Navbar.jsx — Handles site navigation and theme switching ✨
+
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
 import '../styles/global.css';
+
+// ✅ Directly import the logo so it works in both local and GitHub Pages
+import logo from '../assets/images/logo.png';
 
 const Navbar = () => {
   const location = useLocation();
@@ -34,7 +39,7 @@ const Navbar = () => {
         {/* Logo Column */}
         <div className="header-col logo-col">
           <Link to="/">
-            <img className="logo" src={`${import.meta.env.BASE_URL}assets/images/logo.png`} alt="Mahak Patel logo" />
+            <img className="logo" src={logo} alt="Mahak Patel logo" />
           </Link>
         </div>
 

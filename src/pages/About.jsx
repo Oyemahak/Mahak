@@ -2,10 +2,14 @@ import React from 'react';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
 
+// ✅ Import image to support both local + GitHub Pages
+import aboutImage from '../assets/images/about-image.svg';
+
 const About = () => {
   return (
     <main>
       <section id="intro">
+        {/* 👤 Left Side - Bio */}
         <div className="intro-left">
           <h1>Mahak Patel</h1>
           <p className="bio">
@@ -19,46 +23,45 @@ const About = () => {
             Also took on <span className="highlight">freelance gigs</span> – built the site for Dazzling Smile Dental Clinic and teamed up with TPM (Toronto's oldest theatre).
           </p>
 
+          {/* 📄 Buttons */}
           <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
             <div className="tooltip-bottom">
-              <a href="/mahak/assets/images/Mahak_Patel_Resume.pdf" target="_blank" rel="noopener noreferrer">
+              <a href="/assets/images/Mahak_Patel_Resume.pdf" target="_blank" rel="noopener noreferrer">
                 <button className="resume-button">Resume</button>
               </a>
-              <span className="tooltiptext-bottom">
-                Yeah yeah, it's not just a hover. Resume's actually there—click it already.
-              </span>
+              <span className="tooltiptext-bottom">Yeah yeah, it's not just a hover. Resume's actually there—click it already.</span>
             </div>
 
             <div className="tooltip-bottom">
-              <a href="/mahak/#projects">
+              <a href="/#projects">
                 <button className="resume-button">My Work</button>
               </a>
               <span className="tooltiptext-bottom">Let's go see what I've been building.</span>
             </div>
           </div>
 
+          {/* 🔗 Social Links */}
           <div className="connect-container">
             <p className="connect">Connect with me:</p>
             <div className="social-icons">
-              <a href="https://github.com/Oyemahak" aria-label="GitHub"><i className="fab fa-github"></i></a>
-              <a href="https://www.instagram.com/oyemahak/" aria-label="Instagram"><i className="fab fa-instagram"></i></a>
-              <a href="https://www.linkedin.com/in/mahak-patel-167640150/" aria-label="LinkedIn"><i className="fab fa-linkedin"></i></a>
+              <a href="https://github.com/Oyemahak" aria-label="GitHub" target="_blank" rel="noopener noreferrer"><i className="fab fa-github"></i></a>
+              <a href="https://www.instagram.com/oyemahak/" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><i className="fab fa-instagram"></i></a>
+              <a href="https://www.linkedin.com/in/mahak-patel-167640150/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><i className="fab fa-linkedin"></i></a>
               <a href="mailto:mahakpateluux@gmail.com" aria-label="Email"><i className="fas fa-envelope"></i></a>
             </div>
           </div>
         </div>
 
+        {/* 🖼️ Right Side - Image */}
         <div className="intro-right">
-          <img
-            src="/mahak/assets/images/about-image.svg"
-            alt="Professional web developer and UI/UX designer illustration"
-          />
+          <img src={aboutImage} alt="Professional web developer and UI/UX designer illustration" />
           <p className="cta">
             Aside from design, I enjoy trekking, camping, and I'm a professional badminton player.
           </p>
         </div>
       </section>
 
+      {/* 📬 Contact + Footer */}
       <Contact />
       <div className="separator"></div>
       <Footer />

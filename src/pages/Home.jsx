@@ -5,7 +5,12 @@ import Skills from "../components/Skills";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 
+// ✅ Import image for proper resolution in both local & GitHub Pages
+import profileImage from "../assets/images/profile-image.png";
+
 function Home() {
+  const base = import.meta.env.BASE_URL;
+
   return (
     <>
       <main id="main-content">
@@ -15,8 +20,8 @@ function Home() {
             <h1>Mahak Patel</h1>
             <p className="bio">
               I'm a <span className="highlight">Web Developer</span> and{" "}
-              <span className="highlight">UI/UX designer</span> who builds functional, stylish, and goal-driven
-              digital experiences. I make sure every design is implementable and every website delivers results.
+              <span className="highlight">UI/UX designer</span> who builds functional, stylish, and goal-driven digital
+              experiences. I make sure every design is implementable and every website delivers results.
             </p>
             <p className="bio">
               <i>Scroll Down</i> to explore my projects and see how I bring creativity and precision to every line of
@@ -24,7 +29,7 @@ function Home() {
             </p>
 
             <div className="tooltip-bottom">
-              <a href="/mahak/assets/images/Mahak_Patel_Resume.pdf" target="_blank" rel="noopener noreferrer">
+              <a href={`${base}assets/images/Mahak_Patel_Resume.pdf`} target="_blank" rel="noopener noreferrer">
                 <button className="resume-button">Resume</button>
               </a>
               <span className="tooltiptext-bottom">
@@ -35,12 +40,7 @@ function Home() {
             <div className="connect-container">
               <p className="connect">Connect with me:</p>
               <div className="social-icons">
-                <a
-                  href="https://github.com/Oyemahak"
-                  aria-label="GitHub"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
+                <a href="https://github.com/Oyemahak" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
                   <i className="fab fa-github"></i>
                 </a>
                 <a
@@ -67,10 +67,8 @@ function Home() {
           </div>
 
           <div className="intro-right">
-            <img
-              src="/mahak/assets/images/profile-image.png"
-              alt="Mahak Patel profile"
-            />
+            {/* ✅ Use imported image */}
+            <img src={profileImage} alt="Mahak Patel profile" />
             <p className="cta">
               I don't just build websites—I build solutions that work, look great, and get the job done.
             </p>
