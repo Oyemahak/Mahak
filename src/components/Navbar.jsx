@@ -73,11 +73,15 @@ const Navbar = () => {
                 <span className="tooltiptext-bottom">Who’s behind this magic?</span>
               </li>
 
-              <li className="tooltip-bottom">
-                {/* ✅ Scroll to local #contact, don't navigate away */}
-                <button className="contact-link-btn" onClick={handleContactClick}>
-                  Contact
-                </button>
+              <li className={`tooltip-bottom ${location.pathname === '/' ? 'active' : ''}`}>
+                <a
+                  href="#contact"
+                  onClick={(e) => {
+                    e.preventDefault(); // prevent jump
+                    handleContactClick();
+                  }}
+                  className="nav-link">Contact
+                </a>
                 <span className="tooltiptext-bottom">Talk to me. I don’t bite.</span>
               </li>
             </ul>
