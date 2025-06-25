@@ -49,7 +49,7 @@ const Projects = () => {
         {(activeTab === "ux" ? uxProjects : devProjects).map((project, index) => (
           <div className="project" key={index}>
             <img
-              src={`/assets/images/${project.img}`}
+              src={`./assets/images/${project.img}`}
               alt={`${project.title} project screenshot`}
             />
             <h3>{project.title}</h3>

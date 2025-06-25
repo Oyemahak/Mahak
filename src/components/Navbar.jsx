@@ -5,8 +5,6 @@ import '../styles/global.css';
 const Navbar = () => {
   const location = useLocation();
 
-  // Let main.js control theme logic; no theme switching code here.
-
   useEffect(() => {
     const savedTheme = localStorage.getItem('portfolio-theme') || 'default';
     document.body.className = `${savedTheme}-theme`;
@@ -15,11 +13,14 @@ const Navbar = () => {
   return (
     <header>
       <div className="header-grid">
+        {/* Logo Column */}
         <div className="header-col logo-col">
           <Link to="/">
-            <img className="logo" src="/assets/images/logo.png" alt="Mahak Patel logo" />
+            <img className="logo" src="./assets/images/logo.png" alt="Mahak Patel logo" />
           </Link>
         </div>
+
+        {/* Theme Switcher */}
         <div className="header-col role-col">
           <div className="theme-switcher">
             <button className="theme-btn" data-theme="default" aria-label="Default Theme">
@@ -36,6 +37,8 @@ const Navbar = () => {
             </button>
           </div>
         </div>
+
+        {/* Desktop Nav Links */}
         <div className="header-col nav-col">
           <nav>
             <ul className="desktop-menu">
@@ -52,10 +55,13 @@ const Navbar = () => {
                 <span className="tooltiptext-bottom">Who’s behind this magic?</span>
               </li>
               <li className="tooltip-bottom">
-                <a href="#contact">Contact</a>
+                {/* Use full path with /#contact only from root route */}
+                <a href={location.pathname === '/' ? '#contact' : '/#contact'}>Contact</a>
                 <span className="tooltiptext-bottom">Talk to me. I don’t bite.</span>
               </li>
             </ul>
+
+            {/* Hamburger Icon for Mobile */}
             <div className="mobile-menu-icon">
               <i className="fas fa-bars"></i>
             </div>
