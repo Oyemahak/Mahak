@@ -21,7 +21,7 @@ const About = () => {
 
           <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
             <div className="tooltip-bottom">
-              <a href="/assets/images/Mahak_Patel_Resume.pdf" target="_blank" rel="noopener noreferrer">
+              <a href="./assets/images/Mahak_Patel_Resume.pdf" target="_blank" rel="noopener noreferrer">
                 <button className="resume-button">Resume</button>
               </a>
               <span className="tooltiptext-bottom">Yeah yeah, it's not just a hover. Resume's actually there—click it already.</span>
@@ -47,7 +47,7 @@ const About = () => {
         </div>
 
         <div className="intro-right">
-          <img src="/assets/images/about-image.svg" alt="Professional web developer and UI/UX designer illustration" />
+          <img src="./assets/images/about-image.svg" alt="Professional web developer and UI/UX designer illustration" />
           <p className="cta">
             Aside from design, I enjoy trekking, camping, and I'm a professional badminton player.
           </p>

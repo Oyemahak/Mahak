@@ -16,7 +16,7 @@ const Play = () => {
 
         <div className="projects-grid playground-grid">
           <div className="project playground-card">
-            <img src="/assets/images/touch-me-preview.png" alt="Touch Me Game Preview" />
+            <img src="./assets/images/touch-me-preview.png" alt="Touch Me Game Preview" />
             <h3>Touch Me</h3>
             <p>Test your reflexes with this fast-paced game. Ready, set... tap!</p>
             <Link to="/touchme">
@@ -25,7 +25,7 @@ const Play = () => {
           </div>
 
           <div className="project playground-card">
-            <img src="/assets/images/emogy-preview.png" alt="Emoji Match Game Preview" />
+            <img src="./assets/images/emogy-preview.png" alt="Emoji Match Game Preview" />
             <h3>Match Emogy</h3>
             <p>Can your brain keep up with emoji chaos? Find the pairs before the clock runs out!</p>
             <Link to="/memorygame">

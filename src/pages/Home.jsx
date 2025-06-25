@@ -24,7 +24,7 @@ function Home() {
             </p>
 
             <div className="tooltip-bottom">
-              <a href="/assets/images/Mahak_Patel_Resume.pdf" target="_blank" rel="noopener noreferrer">
+              <a href="./assets/images/Mahak_Patel_Resume.pdf" target="_blank" rel="noopener noreferrer">
                 <button className="resume-button">Resume</button>
               </a>
               <span className="tooltiptext-bottom">
@@ -62,7 +62,7 @@ function Home() {
           </div>
 
           <div className="intro-right">
-            <img src="/assets/images/profile-image.png" alt="Mahak Patel profile" />
+            <img src="./assets/images/profile-image.png" alt="Mahak Patel profile" />
             <p className="cta">
               I don't just build websites—I build solutions that work, look great, and get the job done.
             </p>

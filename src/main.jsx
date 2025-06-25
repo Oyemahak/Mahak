@@ -20,7 +20,7 @@ import './styles/snow-theme.css';
 // 🌧️ Raindrops & lightning drama
 import './styles/rain-theme.css';
 
-import './styles/theme-effects.css'; // formerly theme-animations.css
+import './styles/theme-effects.css';
 
 // 🌟 Render the app!
 ReactDOM.createRoot(document.getElementById('root')).render(
