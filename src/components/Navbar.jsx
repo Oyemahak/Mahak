@@ -1,14 +1,32 @@
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
 import '../styles/global.css';
 
 const Navbar = () => {
   const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const savedTheme = localStorage.getItem('portfolio-theme') || 'default';
     document.body.className = `${savedTheme}-theme`;
   }, []);
+
+  const handleContactClick = () => {
+    if (location.pathname === '/') {
+      // Already on home — scroll smoothly
+      setTimeout(() => {
+        const contact = document.getElementById('contact');
+        if (contact) contact.scrollIntoView({ behavior: 'smooth' });
+      }, 100);
+    } else {
+      // Navigate to home, then scroll
+      navigate('/');
+      setTimeout(() => {
+        const contact = document.getElementById('contact');
+        if (contact) contact.scrollIntoView({ behavior: 'smooth' });
+      }, 300); // slight delay so home can render first
+    }
+  };
 
   return (
     <header>
@@ -16,7 +34,7 @@ const Navbar = () => {
         {/* Logo Column */}
         <div className="header-col logo-col">
           <Link to="/">
-            <img className="logo" src="./assets/images/logo.png" alt="Mahak Patel logo" />
+            <img className="logo" src={`${import.meta.env.BASE_URL}assets/images/logo.png`} alt="Mahak Patel logo" />
           </Link>
         </div>
 
@@ -55,8 +73,9 @@ const Navbar = () => {
                 <span className="tooltiptext-bottom">Who’s behind this magic?</span>
               </li>
               <li className="tooltip-bottom">
-                {/* Use full path with /#contact only from root route */}
-                <a href={location.pathname === '/' ? '#contact' : '/#contact'}>Contact</a>
+                <button className="contact-link-btn" onClick={handleContactClick}>
+                  Contact
+                </button>
                 <span className="tooltiptext-bottom">Talk to me. I don’t bite.</span>
               </li>
             </ul>
