@@ -1,4 +1,4 @@
-/* 🌧️ RAIN THEME - WET & WILD */
+/* 🌧️ RAIN THEME — FINAL VERSION: Cinematic Lightning + Steady Rain */
 
 /* === Background: Moody Rain Sky === */
 .rain-theme {
@@ -50,25 +50,21 @@
 }
 
 .rain-theme .resume-button:hover::before {
-  animation: none;
   animation: lightningFlash 0.8s linear;
-}
-
-/* Force re-trigger on every hover */
-.rain-theme .resume-button:hover::before {
-  will-change: opacity, transform;
 }
 
 @keyframes lightningFlash {
   0%   { opacity: 0; transform: translateY(-100%) rotate(45deg); }
-  10%  { opacity: 0.8; }
+  10%  { opacity: 0.9; }
   20%  { opacity: 0; }
   30%  { opacity: 0.6; }
   40%  { opacity: 0; }
+  70%  { opacity: 0.3; }
+  90%  { opacity: 0; }
   100% { opacity: 0; }
 }
 
-/* === Raindrops === */
+/* === Steady Raindrop Effect === */
 .raindrop {
   position: fixed;
   width: 2px;
@@ -101,7 +97,7 @@
   }
 }
 
-/* === Fullscreen Lightning Flash Layer === */
+/* === Lightning Fullscreen Flash === */
 .lightning {
   position: fixed;
   top: 0;

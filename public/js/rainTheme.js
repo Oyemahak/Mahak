@@ -1,15 +1,16 @@
-// rainTheme.js — FINAL FIXED VERSION ⚡🌧️
+// rainTheme.js — FINAL VERSION ⚡ Steady Rain + Perfect Lightning
 export function initRainTheme() {
-  createRain();
-  createLightningLayer();
-  setupLightningHoverRepeater(); // trigger binding persistently
+  createRain();              // consistent rain
+  createLightningLayer();    // single reusable flash layer
+  setupLightningHoverRepeater(); // attach hover logic to all buttons
 }
 
 function createRain() {
-  // Remove old raindrops
+  // Clear existing rain
   document.querySelectorAll('.raindrop, .ripple').forEach(el => el.remove());
 
-  for (let i = 0; i < 120; i++) { // doubled the density
+  // Create consistent raindrops
+  for (let i = 0; i < 120; i++) {
     const drop = document.createElement('div');
     drop.className = 'raindrop';
     drop.style.left = `${Math.random() * 100}vw`;
@@ -27,14 +28,12 @@ function createRain() {
         ripple.style.width = '20px';
         ripple.style.height = '20px';
         document.body.appendChild(ripple);
-        setTimeout(() => ripple.remove(), 1500);
       }, parseFloat(drop.style.animationDuration) * 900);
     }
   }
 }
 
 function createLightningLayer() {
-  // Create a lightning layer if it doesn't exist
   if (!document.querySelector('.lightning')) {
     const flash = document.createElement('div');
     flash.className = 'lightning';
@@ -45,13 +44,12 @@ function createLightningLayer() {
 function setupLightningHoverRepeater() {
   const observer = new MutationObserver(() => bindLightningToButtons());
   observer.observe(document.body, { childList: true, subtree: true });
-  bindLightningToButtons(); // also do an initial bind
+  bindLightningToButtons();
 }
 
 function bindLightningToButtons() {
   const buttons = document.querySelectorAll('.resume-button');
   const lightning = document.querySelector('.lightning');
-
   if (!lightning) return;
 
   buttons.forEach(btn => {
@@ -63,19 +61,15 @@ function bindLightningToButtons() {
 }
 
 function flashLightning(layer) {
-  layer.style.transition = 'none';
-  layer.style.opacity = '1';
-  requestAnimationFrame(() => {
-    layer.style.transition = 'opacity 0.3s ease';
-    layer.style.opacity = '0';
+  const flashes = [0, 120, 240, 420]; // realistic flash pattern
+  flashes.forEach((delay, i) => {
+    setTimeout(() => {
+      layer.style.transition = 'none';
+      layer.style.opacity = i % 2 === 0 ? '1' : '0.5';
+      requestAnimationFrame(() => {
+        layer.style.transition = 'opacity 0.3s ease';
+        layer.style.opacity = '0';
+      });
+    }, delay);
   });
-
-  setTimeout(() => {
-    layer.style.transition = 'none';
-    layer.style.opacity = '0.6';
-    requestAnimationFrame(() => {
-      layer.style.transition = 'opacity 0.4s ease';
-      layer.style.opacity = '0';
-    });
-  }, 250);
 }
