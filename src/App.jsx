@@ -1,26 +1,32 @@
-import { HashRouter as Router } from 'react-router-dom';
+// App.jsx — Final working version for GitHub Pages with Vite
+
+import React from 'react';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+} from 'react-router-dom';
+
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
-import Play from './pages/Play';
 import About from './pages/About';
-
-// 🎮 Mini-games
+import Play from './pages/Play';
 import TouchMe from './games/touchme/TouchMe';
-import MemoryGame from "./games/memory/MemoryGame";
+import MemoryGame from './games/memory/MemoryGame';
+import Footer from './components/Footer';
 
 function App() {
   return (
-    <Router>
+    <Router basename="/mahak">
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/play" element={<Play />} />
         <Route path="/about" element={<About />} />
-
-        {/* 🎮 Mini-Game Routes */}
+        <Route path="/play" element={<Play />} />
         <Route path="/touchme" element={<TouchMe />} />
         <Route path="/memorygame" element={<MemoryGame />} />
       </Routes>
+      <Footer />
     </Router>
   );
 }
