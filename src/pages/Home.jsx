@@ -1,6 +1,4 @@
 import React from "react";
-import "../styles/global.css";
-import "../styles/theme-animations.css";
 import WorkedFor from "../components/WorkedFor";
 import Projects from "../components/Projects";
 import Skills from "../components/Skills";

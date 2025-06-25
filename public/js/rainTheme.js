@@ -1,8 +1,8 @@
-// rainTheme.js — ⚡ Rainstorm Time
+// rainTheme.js — ⚡ Rainstorm Time (Final Fixed Version)
 export function initRainTheme() {
-  createRain();       // 🌧️
-  createLightning();  // ⚡
-  setupLightningHover(); // ⛈️
+  createRain();
+  createLightning();
+  setupLightningHoverAll(); // apply to all buttons
 }
 
 function createRain() {
@@ -15,7 +15,6 @@ function createRain() {
     raindrop.style.animationDuration = `${1 + Math.random() * 1.5}s`;
     document.body.appendChild(raindrop);
 
-    // Add ripple effect after raindrop reaches the ground
     if (i % 5 === 0) {
       setTimeout(() => {
         const ripple = document.createElement('div');
@@ -25,37 +24,47 @@ function createRain() {
         ripple.style.width = '20px';
         ripple.style.height = '20px';
         document.body.appendChild(ripple);
-      }, parseFloat(raindrop.style.animationDuration) * 1000 * 0.9);
+        setTimeout(() => ripple.remove(), 1500);
+      }, parseFloat(raindrop.style.animationDuration) * 900);
     }
   }
 }
 
 function createLightning() {
+  // Remove existing to avoid duplicates
+  const existing = document.querySelector('.lightning');
+  if (existing) existing.remove();
+
   const lightning = document.createElement('div');
   lightning.className = 'lightning';
   document.body.appendChild(lightning);
 }
 
-function setupLightningHover() {
-  const resumeBtn = document.querySelector('.resume-button');
+function setupLightningHoverAll() {
+  const buttons = document.querySelectorAll('.resume-button');
   const lightning = document.querySelector('.lightning');
 
-  if (!resumeBtn || !lightning) return;
+  if (!buttons.length || !lightning) return;
 
-  resumeBtn.addEventListener('mouseenter', () => {
-    lightning.style.opacity = '0.9';
-    lightning.style.transition = 'none';
-    setTimeout(() => {
-      lightning.style.opacity = '0';
-      lightning.style.transition = 'opacity 0.3s';
-    }, 50);
-    setTimeout(() => {
-      lightning.style.opacity = '0.6';
+  buttons.forEach(button => {
+    button.addEventListener('mouseenter', () => {
+      // Flash ON
+      lightning.style.opacity = '0.9';
       lightning.style.transition = 'none';
-      setTimeout(() => {
+      requestAnimationFrame(() => {
         lightning.style.opacity = '0';
-        lightning.style.transition = 'opacity 0.3s';
-      }, 100);
-    }, 200);
+        lightning.style.transition = 'opacity 0.2s';
+      });
+
+      // Flash AGAIN shortly after
+      setTimeout(() => {
+        lightning.style.opacity = '0.6';
+        lightning.style.transition = 'none';
+        requestAnimationFrame(() => {
+          lightning.style.opacity = '0';
+          lightning.style.transition = 'opacity 0.3s';
+        });
+      }, 200);
+    });
   });
 }
