@@ -1,6 +1,4 @@
 // main.jsx — The Launchpad 🚀
-// React entry point with all themes imported like superheroes assembling
-
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
@@ -22,6 +20,9 @@ import './styles/snow-theme.css';
 import './styles/rain-theme.css';
 
 import './styles/theme-effects.css';
+
+// ✅ Theme & interaction scripts for rain, moon, snow, etc.
+import './js/main.js';
 
 // 🌟 Render the app!
 ReactDOM.createRoot(document.getElementById('root')).render(
