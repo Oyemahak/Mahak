@@ -199,3 +199,64 @@
     font-size: 22px;
   }
 }
+
+/* ========================================== */
+/*       Case Study Enhancements - Byblos     */
+/* ========================================== */
+
+.cs-list {
+  color: #cccccc;
+  font-size: 16px;
+  margin: 16px 0;
+  line-height: 1.7;
+  list-style: none;
+  padding-left: 0;
+}
+
+.cs-list li {
+  margin-bottom: 12px;
+}
+
+.outlined {
+  border: 2px dashed #555;
+  padding: 12px;
+  border-radius: 8px;
+}
+
+.prototype-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin: 48px 0;
+  flex-wrap: wrap;
+}
+
+.cs-button {
+  background-color: #3C82F6;
+  color: white;
+  padding: 12px 24px;
+  font-size: 14px;
+  border-radius: 8px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.cs-button:hover {
+  background-color: #246ae0;
+}
+
+.cs-button.outline {
+  background-color: transparent;
+  border: 2px solid #3C82F6;
+}
+
+.case-study-nav {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin: 64px 0;
+  flex-wrap: wrap;
+}
