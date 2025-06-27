@@ -22,12 +22,10 @@
   transition: box-shadow 0.3s ease;
 }
 
-/* 🌟 Card glow on hover */
 .project:hover {
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
 }
 
-/* 📦 Card content (entire section that gets blurred) */
 .project-content {
   transition: filter 0.3s ease;
 }
@@ -36,14 +34,12 @@
   filter: blur(2px) brightness(0.6);
 }
 
-/* 🖼️ Project Image */
 .project img {
   width: 100%;
   height: auto;
   border-radius: 8px;
 }
 
-/* 📌 Title & Description */
 .project h3 {
   margin: 16px 0 8px;
   font-size: 24px;
@@ -56,7 +52,6 @@
   color: #ffffff;
 }
 
-/* 👁️ View Project Button (centered on hover) */
 .view-project-btn {
   position: absolute;
   top: 50%;
@@ -82,7 +77,7 @@
 }
 
 /* ========================================== */
-/*           RESPONSIVE GRID BREAKPOINTS      */
+/*           RESPONSIVE PROJECT CARDS         */
 /* ========================================== */
 
 @media (max-width: 992px) {
@@ -104,13 +99,22 @@
 }
 
 /* ========================================== */
-/*           Case Study Layout (Byblos)       */
+/*           CASE STUDY PAGE STYLES           */
 /* ========================================== */
 
 .case-study-page {
-  padding: 24px 32px;
-  max-width: 1190px;
+  padding: 24px 16px;
+  max-width: 1160px;
   margin: 0 auto;
+}
+
+/* 🔹 Section Layout */
+.case-study-section {
+  margin-bottom: 48px;
+  padding: 24px;
+  background-color: transparent;
+  border: 1.5px dashed #444;
+  border-radius: 8px;
 }
 
 .case-study-intro {
@@ -119,30 +123,12 @@
   background-color: transparent;
 }
 
+/* 🔹 Section Titles */
 .case-study-intro h1 {
   font-size: 32px;
   font-weight: 700;
   color: #ffffff;
   margin-bottom: 24px;
-}
-
-.project-type {
-  font-size: 16px;
-  color: #999999;
-}
-
-.project-description {
-  font-size: 18px;
-  line-height: 1.6;
-  color: #cccccc;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-.case-study-section {
-  margin-bottom: 64px;
-  padding: 32px 32px;
-  background-color: transparent;
 }
 
 .case-study-section h2 {
@@ -152,10 +138,62 @@
   text-align: center;
 }
 
+/* 🔹 Details */
+.project-type {
+  font-size: 16px;
+  color: #999999;
+}
+
+.project-description {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #cccccc;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* ========================================== */
+/*       💡 Three-Column Responsive Section    */
+/* ========================================== */
+
+.cs-three-col {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.cs-three-col > div {
+  flex: 1 1 calc(33.333% - 16px);
+  color: #ccc;
+  font-size: 16px;
+}
+
+.cs-three-col h3 {
+  font-size: 18px;
+  color: #fff;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+/* 📱 Mobile fallback */
+@media (max-width: 768px) {
+  .cs-three-col {
+    flex-direction: column;
+  }
+
+  .cs-three-col > div {
+    flex: 1 1 100%;
+  }
+}
+
+/* ========================================== */
+/*               Images & Mockups             */
+/* ========================================== */
+
 .cs-image {
   width: 100%;
-  max-width: 100%;
-  border-radius: 10px;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease;
 }
@@ -169,66 +207,69 @@
   gap: 24px;
   justify-content: center;
   flex-wrap: wrap;
+  margin-top: 16px;
 }
 
 .cs-flex-images img {
   width: 48%;
   max-width: 480px;
-  border-radius: 10px;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
 }
 
-/* ========================================== */
-/*          Responsive Case Study Layout      */
-/* ========================================== */
-
-@media (max-width: 768px) {
-  .case-study-intro h1 {
-    font-size: 26px;
-  }
-
-  .project-description {
-    font-size: 16px;
-  }
-
-  .cs-flex-images img {
-    width: 100%;
-  }
-
-  .case-study-section h2 {
-    font-size: 22px;
-  }
+/* Prototype Hover Buttons */
+.cs-mockup-wrapper {
+  position: relative;
+  flex: 1 1 48%;
+  max-width: 480px;
 }
 
-/* ========================================== */
-/*       Case Study Enhancements - Byblos     */
-/* ========================================== */
-
-.cs-list {
-  color: #cccccc;
-  font-size: 16px;
-  margin: 16px 0;
-  line-height: 1.7;
-  list-style: none;
-  padding-left: 0;
+.cs-mockup-wrapper img {
+  width: 100%;
+  display: block;
 }
 
-.cs-list li {
-  margin-bottom: 12px;
+/* 🔹 Blur + button on hover */
+.cs-mockup-wrapper:hover img {
+  filter: blur(2px) brightness(0.6);
 }
 
-.outlined {
-  border: 2px dashed #555;
-  padding: 12px;
+.cs-mockup-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.95);
+  opacity: 0;
+  background: rgba(60, 130, 246, 0.85);
+  color: #fff;
+  padding: 12px 24px;
+  font-size: 14px;
+  font-weight: 600;
+  border: none;
   border-radius: 8px;
+  backdrop-filter: blur(8px);
+  transition: all 0.3s ease;
+  text-decoration: none;
+  text-align: center;
+  z-index: 10;
 }
 
-.prototype-buttons {
+.cs-mockup-wrapper:hover .cs-mockup-btn {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+  cursor: pointer;
+}
+
+/* ========================================== */
+/*            Case Study Buttons              */
+/* ========================================== */
+
+.prototype-buttons,
+.case-study-nav {
   display: flex;
   justify-content: center;
   gap: 24px;
-  margin: 48px 0;
   flex-wrap: wrap;
+  margin: 48px 0 32px;
 }
 
 .cs-button {
@@ -242,6 +283,10 @@
   cursor: pointer;
   transition: all 0.3s ease;
   text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
 }
 
 .cs-button:hover {
@@ -253,10 +298,25 @@
   border: 2px solid #3C82F6;
 }
 
-.case-study-nav {
-  display: flex;
-  justify-content: center;
-  gap: 24px;
-  margin: 64px 0;
-  flex-wrap: wrap;
+.cs-button i {
+  font-size: 14px;
+}
+
+.back-btn i {
+  margin-right: 8px;
+}
+
+.next-btn i {
+  margin-left: 8px;
+}
+
+/* ========================================== */
+/*              Horizontal Divider            */
+/* ========================================== */
+
+.separator {
+  width: 100%;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.1);
+  margin: 48px auto;
 }
