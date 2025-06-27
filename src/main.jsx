@@ -20,6 +20,7 @@ import './styles/snow-theme.css';
 import './styles/rain-theme.css';
 
 import './styles/theme-effects.css';
+import './styles/projects.css';
 
 // ✅ Theme & interaction scripts for rain, moon, snow, etc.
 import './js/main.js';

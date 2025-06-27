@@ -1,0 +1,201 @@
+/* ========================================== */
+/*           PROJECTS SECTION STYLING         */
+/* ========================================== */
+
+.projects-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  justify-content: space-between;
+}
+
+.project {
+  position: relative;
+  flex: 1 1 calc(33.333% - 32px);
+  padding: 32px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  backdrop-filter: blur(10px);
+  overflow: hidden;
+  cursor: default;
+  transition: box-shadow 0.3s ease;
+}
+
+/* 🌟 Card glow on hover */
+.project:hover {
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
+}
+
+/* 📦 Card content (entire section that gets blurred) */
+.project-content {
+  transition: filter 0.3s ease;
+}
+
+.project:hover .project-content {
+  filter: blur(2px) brightness(0.6);
+}
+
+/* 🖼️ Project Image */
+.project img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* 📌 Title & Description */
+.project h3 {
+  margin: 16px 0 8px;
+  font-size: 24px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.project p {
+  font-size: 16px;
+  color: #ffffff;
+}
+
+/* 👁️ View Project Button (centered on hover) */
+.view-project-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.9);
+  opacity: 0;
+  background: rgba(60, 130, 246, 0.9);
+  color: #ffffff;
+  border: none;
+  padding: 12px 24px;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 8px;
+  backdrop-filter: blur(8px);
+  transition: all 0.3s ease;
+  z-index: 5;
+}
+
+.project:hover .view-project-btn {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+  cursor: pointer;
+}
+
+/* ========================================== */
+/*           RESPONSIVE GRID BREAKPOINTS      */
+/* ========================================== */
+
+@media (max-width: 992px) {
+  .project {
+    flex: 1 1 calc(50% - 16px);
+  }
+}
+
+@media (max-width: 600px) {
+  .project {
+    flex: 1 1 100%;
+    padding: 16px;
+  }
+
+  .view-project-btn {
+    padding: 10px 20px;
+    font-size: 13px;
+  }
+}
+
+/* ========================================== */
+/*           Case Study Layout (Byblos)       */
+/* ========================================== */
+
+.case-study-page {
+  padding: 24px 32px;
+  max-width: 1190px;
+  margin: 0 auto;
+}
+
+.case-study-intro {
+  text-align: center;
+  margin-bottom: 48px;
+  background-color: transparent;
+}
+
+.case-study-intro h1 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 24px;
+}
+
+.project-type {
+  font-size: 16px;
+  color: #999999;
+}
+
+.project-description {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #cccccc;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.case-study-section {
+  margin-bottom: 64px;
+  padding: 32px 32px;
+  background-color: transparent;
+}
+
+.case-study-section h2 {
+  font-size: 26px;
+  margin-bottom: 24px;
+  color: #ffffff;
+  text-align: center;
+}
+
+.cs-image {
+  width: 100%;
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.cs-image:hover {
+  transform: scale(1.015);
+}
+
+.cs-flex-images {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.cs-flex-images img {
+  width: 48%;
+  max-width: 480px;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* ========================================== */
+/*          Responsive Case Study Layout      */
+/* ========================================== */
+
+@media (max-width: 768px) {
+  .case-study-intro h1 {
+    font-size: 26px;
+  }
+
+  .project-description {
+    font-size: 16px;
+  }
+
+  .cs-flex-images img {
+    width: 100%;
+  }
+
+  .case-study-section h2 {
+    font-size: 22px;
+  }
+}
