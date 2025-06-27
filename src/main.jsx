@@ -24,9 +24,13 @@ import './styles/theme-effects.css';
 // ✅ Theme & interaction scripts for rain, moon, snow, etc.
 import './js/main.js';
 
+// 🌍 Set basename only for GitHub Pages
+const isGitHubPages = import.meta.env.BASE_URL !== '/';
+const baseName = isGitHubPages ? '/mahak' : '';
+
 // 🌟 Render the app!
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <BrowserRouter basename="/mahak">
+  <BrowserRouter basename={baseName}>
     <App />
   </BrowserRouter>
 );
