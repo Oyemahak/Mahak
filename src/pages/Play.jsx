@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 // ✅ Import image files for consistent resolution in local + GitHub Pages
 import touchMePreview from '../assets/images/touch-me-preview.png';
 import emojiPreview from '../assets/images/emogy-preview.png';
+import clickrushPreview from '../assets/images/clickrush-preview.png'; // 🆕 Add image for Click Rush
 
 const Play = () => {
   return (
@@ -29,12 +30,22 @@ const Play = () => {
               <button className="resume-button center-btn">Play Now</button>
             </Link>
           </div>
+          
+          {/* 🖱️ Click Rush Game Card */}
+          <div className="project playground-card">
+            <img src={clickrushPreview} alt="Click Rush Game Preview" />
+            <h3>Click Rush</h3>
+            <p>How fast are you? Click those emojis before time runs out. Ready, set... GO!</p>
+            <Link to="/clickrush">
+              <button className="resume-button center-btn">Play Now</button>
+            </Link>
+          </div>
 
           {/* 🧠 Emoji Match Game Card */}
           <div className="project playground-card">
             <img src={emojiPreview} alt="Emoji Match Game Preview" />
             <h3>Match Emogy</h3>
-            <p>Can your brain keep up with emoji chaos? Find the pairs before the clock runs out!</p>
+            <p>Match the emoji pairs fast - fewer moves, less time!</p>
             <Link to="/memorygame">
               <button className="resume-button center-btn">Play Now</button>
             </Link>

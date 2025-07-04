@@ -48,7 +48,7 @@
 }
 
 .project p {
-  font-size: 16px;
+  font-size: 18px;
   color: #ffffff;
 }
 
@@ -94,7 +94,7 @@
 
   .view-project-btn {
     padding: 10px 20px;
-    font-size: 13px;
+    font-size: 14px;
   }
 }
 
@@ -113,13 +113,14 @@
   margin-bottom: 48px;
   padding: 24px;
   background-color: transparent;
-  border: 1.5px dashed #444;
+  border: 2px dashed #444;
   border-radius: 8px;
 }
 
 .case-study-intro {
   text-align: center;
   margin-bottom: 48px;
+  color: #ffffff;
   background-color: transparent;
 }
 
@@ -127,28 +128,33 @@
 .case-study-intro h1 {
   font-size: 32px;
   font-weight: 700;
-  color: #ffffff;
   margin-bottom: 24px;
 }
 
 .case-study-section h2 {
   font-size: 26px;
   margin-bottom: 24px;
-  color: #ffffff;
   text-align: center;
+}
+
+h3 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  text-align: left;
 }
 
 /* 🔹 Details */
 .project-type {
-  font-size: 16px;
+  font-size: 18px;
   color: #999999;
 }
 
 .project-description {
   font-size: 18px;
-  line-height: 1.6;
+  line-height: 1.8;
   color: #cccccc;
-  max-width: 900px;
+  max-width: 1000px;
   margin: 0 auto;
   text-align: center;
 }
@@ -167,7 +173,7 @@
 .cs-three-col > div {
   flex: 1 1 calc(33.333% - 16px);
   color: #ccc;
-  font-size: 16px;
+  font-size: 18px;
 }
 
 .cs-three-col h3 {
@@ -319,4 +325,44 @@
   height: 1px;
   background: rgba(255, 255, 255, 0.1);
   margin: 48px auto;
+}
+
+/* ========================================== */
+/*         Amazon Project Specific Styles      */
+/* ========================================== */
+
+.amazon-case-study img {
+  border-radius: 8px;
+  box-shadow: none;
+}
+
+.amazon-case-study .cs-two-col {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  justify-content: space-between;
+}
+
+.amazon-case-study .cs-two-col > div {
+  flex: 1 1 calc(50% - 16px);
+}
+
+@media (max-width: 768px) {
+  .amazon-case-study .cs-two-col {
+    flex-direction: column;
+  }
+
+  .amazon-case-study .cs-two-col > div {
+    flex: 1 1 100%;
+  }
+}
+
+.amazon-case-study .cs-list {
+  padding-left: 18px;
+  line-height: 2;
+  color: #ccc;
+}
+
+.amazon-case-study .cs-flex-images img {
+  transition: none; /* Disable hover zoom for this project */
 }

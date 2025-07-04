@@ -35,9 +35,9 @@ const Projects = () => {
     },
     {
       img: project3,
-      title: "Subway",
+      title: "Amazon Prime",
       desc: "Heuristic Evaluation, Usability Testing, Affinity Mapping",
-      route: "/subway",
+      route: "/amazonprime",
     },
     {
       img: project4,
