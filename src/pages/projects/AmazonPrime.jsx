@@ -44,21 +44,8 @@ const AmazonPrime = () => {
 
             <section className="case-study-section cs-two-col">
                 <div>
-                    <h3>Usability Testing Procedure</h3>
-                    <ul className="cs-list">
-                        <li>Screen Recording Software: captured participant interaction.</li>
-                        <li>Observational Documentation: noted verbal and non-verbal reactions.</li>
-                    </ul>
-                </div>
-                <div>
-                    <img src={procedure} alt="Usability Testing Procedure" className="cs-image" />
-                </div>
-            </section>
-
-            <section className="case-study-section cs-two-col">
-                <div>
                     <h3>My Role</h3>
-                    <p>This was a group project with another UX designer. My contributions included:</p>
+                    <p>Group project with fellow UX designers - my contributions:</p>
                     <ul className="cs-list">
                         <li>Conducting usability testing</li>
                         <li>Performing heuristic evaluations</li>
@@ -67,10 +54,12 @@ const AmazonPrime = () => {
                 </div>
                 <div>
                     <h3>Goals</h3>
+                    <p>We wanted to evaluate Prime Video's web interface, focusing on:</p>
                     <ul className="cs-list">
-                        <li>Improve navigation and content discovery</li>
-                        <li>Enhance watchlist management</li>
-                        <li>Simplify the playback experience</li>
+                        <li>Navigation</li>
+                        <li>Content discovery</li>
+                        <li>Watchlist management</li>
+                        <li>Playback experience</li>
                     </ul>
                 </div>
             </section>
@@ -79,75 +68,150 @@ const AmazonPrime = () => {
                 <div>
                     <h3>Methodologies</h3>
                     <ul className="cs-list">
-                        <li><strong>Heuristic Evaluation</strong>: Evaluated usability standards</li>
-                        <li><strong>Usability Testing</strong>: Gathered real user insights</li>
-                        <li><strong>Affinity Mapping</strong>: Organized findings into themes</li>
-                    </ul>
-                </div>
-                <div>
-                    <img src={metrics} alt="Usability Testing Metrics" className="cs-image" />
-                </div>
-            </section>
-
-            <section className="case-study-section cs-two-col">
-                <div>
-                    <h3>Data Analysis</h3>
-                    <ul className="cs-list">
-                        <li>Collecting, labeling, grouping feedback</li>
-                        <li>Affinity mapping & pattern recognition</li>
-                        <li>Prioritizing issues & generating insights</li>
-                    </ul>
-                </div>
-                <div>
-                    <h3>Key Findings</h3>
-                    <p>Issues related to search, navigation, watchlist, and personalization were discovered. Some were:</p>
-                    <ul className="cs-list">
-                        <li>No navigation for new releases</li>
-                        <li>No alerts for preference-based updates</li>
-                        <li>No saved search history</li>
-                        <li>Unclear watchlist controls</li>
+                        <li><strong>Heuristic Evaluation</strong>: We assessed the website against established usability standards, identifying issues and making recommendations</li>
+                        <li><strong>Usability Testing</strong>: We tested the platform with real users to gather insights and improve satisfaction</li>
+                        <li><strong>Affinity Mapping</strong>: We organized data to visualize usability issues and inform design improvements</li>
                     </ul>
                 </div>
             </section>
 
             <section className="case-study-section">
-                <h3>Heuristic Evaluation Tasks</h3>
-                <div className="cs-three-col">
-                    <div>
-                        <h3>New Users</h3>
-                        <ul className="cs-list">
-                            <li>Sign up</li>
-                            <li>Rent movie without subscription</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h3>Existing Users</h3>
-                        <ul className="cs-list">
-                            <li>Discover content by mood</li>
-                            <li>Add to watchlist</li>
-                            <li>Watch with friends</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h3>Advanced Actions</h3>
-                        <ul className="cs-list">
-                            <li>Cancel subscription</li>
-                            <li>Adjust video quality</li>
-                        </ul>
-                    </div>
+                <div>
+                    <h3>Usability Testing Metrics</h3>
+                    <img src={metrics} alt="Usability Testing Metrics" className="cs-image" />
                 </div>
             </section>
-
             <section className="case-study-section cs-two-col">
+                <div>
+                    <h3>Usability Testing Procedure</h3>
+                    <ul className="cs-list">
+                        <li>Screen Recording Software: Captured participants' interactions to facilitate in-depth analysis.</li>
+                        <li>Observational Documentation: Recorded participants' verbal and non-verbal expressions for supplementary insights.</li>
+                    </ul>
+                </div>
+                <div>
+                    <img src={procedure} alt="Usability Testing Procedure" className="cs-image" />
+                </div>
+            </section>
+            <section className="case-study-section cs-two-col">
+                <div>
+                    <h3>Heuristic Evaluation</h3>
+                    <p><strong>Tasks for New Users</strong></p>
+                    <ul className="cs-list">
+                        <li>Sign up for Amazon Prime Video</li>
+                        <li>Rent a movie without subscribing yearly</li>
+                    </ul>
+
+                    <p><strong>Tasks for Existing Users</strong></p>
+                    <ul className="cs-list">
+                        <li>Find new or fresh content</li>
+                        <li>Explore content based on mood</li>
+                        <li>Add movies/series to the watchlist</li>
+                        <li>Watch content with friends</li>
+                        <li>Cancel subscription</li>
+                        <li>Adjust content quality settings</li>
+                    </ul>
+                </div>
                 <div>
                     <h3>Identified Issues</h3>
                     <ul className="cs-list">
-                        <li>Difficulty finding new releases (severity: 3)</li>
-                        <li>No search history retention (severity: 3)</li>
-                        <li>Watchlist lacks sorting and bulk removal (severity: 4)</li>
+                        <li>
+                            <strong>No easy navigation for new releases</strong><br />
+                            <em>Heuristic:</em> Flexibility and efficiency of use · <strong>Severity: 3</strong>
+                        </li>
+                        <li>
+                            <strong>No notifications for "New Releases" based on preferences</strong><br />
+                            <em>Heuristic:</em> Recognition rather than recall · <strong>Severity: 2</strong>
+                        </li>
+                        <li>
+                            <strong>Search bar doesn't retain search history</strong><br />
+                            <em>Heuristic:</em> Recognition rather than recall · <strong>Severity: 3</strong>
+                        </li>
+                        <li>
+                            <strong>Difficulty selecting specific genres</strong><br />
+                            <em>Heuristic:</em> Flexibility and efficiency of use · <strong>Severity: 1</strong>
+                        </li>
+                        <li>
+                            <strong>Difficulty organizing watchlist by genre</strong><br />
+                            <em>Heuristic:</em> User control and freedom · <strong>Severity: 4</strong>
+                        </li>
+                        <li>
+                            <strong>Unclear action to remove items from the watchlist</strong><br />
+                            <em>Heuristic:</em> Match between system and real world · <strong>Severity: 1</strong>
+                        </li>
+                        <li>
+                            <strong>Need to remove multiple movies at once</strong><br />
+                            <em>Heuristic:</em> Flexibility and efficiency of use · <strong>Severity: 2</strong>
+                        </li>
                     </ul>
                 </div>
 
+            </section>
+            <section className="case-study-section">
+                <div>
+                    <h3>Recommendations</h3>
+                    <p>During usability testing, we create scenarios that mimic real-life situations to guide users in interacting with the product. These scenarios are like scripts that help users understand what tasks they need to perform. By doing this, we can observe how well the product works for them and whether it meets their needs. This process helps us gather valuable feedback to improve the product and make it more user-friendly</p>
+                </div>
+
+                {/* Image Sections */}
+                <section className="case-study-section-recommendations">
+                    <h2>Content Listing</h2>
+                    <div className="cs-flex-images">
+                        <img src={img1} alt="Content Listing 1" />
+                        <img src={img2} alt="Content Listing 2" />
+                    </div>
+                </section>
+
+                <section className="case-study-section-recommendations">
+                    <h2>Content Details</h2>
+                    <div className="cs-flex-images">
+                        <img src={img3} alt="Content Details 1" />
+                        <img src={img4} alt="Content Details 2" />
+                    </div>
+                </section>
+
+                <section className="case-study-section-recommendations">
+                    <h2>Watchlist Management</h2>
+                    <div className="cs-flex-images">
+                        <img src={img5} alt="Watchlist Management 1" />
+                        <img src={img6} alt="Watchlist Management 2" />
+                    </div>
+                </section>
+
+                <section className="case-study-section-recommendations">
+                    <h2>Search History</h2>
+                    <div className="cs-flex-images">
+                        <img src={img7} alt="Search History 1" />
+                        <img src={img8} alt="Search History 2" />
+                    </div>
+                </section>
+
+                <section className="case-study-section-recommendations">
+                    <h2>Personalized Recommendations</h2>
+                    <div className="cs-flex-images">
+                        <img src={img9} alt="Recommendations 1" />
+                        <img src={img10} alt="Recommendations 2" />
+                    </div>
+                </section>
+
+                <section className="case-study-section-recommendations">
+                    <h2>Create New Watchlist</h2>
+                    <div className="cs-flex-images">
+                        <img src={img11} alt="Create Watchlist 1" />
+                        <img src={img12} alt="Create Watchlist 2" />
+                    </div>
+                </section>
+            </section>
+            <section className="case-study-section cs-two-col">
+                <div>
+                    <h3>Key Findings</h3>
+                    <ul className="cs-list">
+                        <li>Navigation was not intuitive for new users</li>
+                        <li>Content discovery lacked clear categorization and context</li>
+                        <li>Watchlist management was buried or hard to access</li>
+                        <li>Feedback mechanisms (ratings, reviews) were underutilized</li>
+                    </ul>
+                </div>
                 <div>
                     <h3>Key Takeaways</h3>
                     <ul className="cs-list">
@@ -156,56 +220,6 @@ const AmazonPrime = () => {
                         <li>Applied Nielsen’s heuristics effectively</li>
                         <li>Learned the value of iterative design</li>
                     </ul>
-                </div>
-
-            </section>
-
-            {/* Image Sections */}
-            <section className="case-study-section">
-                <h2>Content Listing</h2>
-                <div className="cs-flex-images">
-                    <img src={img1} alt="Content Listing 1" />
-                    <img src={img2} alt="Content Listing 2" />
-                </div>
-            </section>
-
-            <section className="case-study-section">
-                <h2>Content Details</h2>
-                <div className="cs-flex-images">
-                    <img src={img3} alt="Content Details 1" />
-                    <img src={img4} alt="Content Details 2" />
-                </div>
-            </section>
-
-            <section className="case-study-section">
-                <h2>Watchlist Management</h2>
-                <div className="cs-flex-images">
-                    <img src={img5} alt="Watchlist Management 1" />
-                    <img src={img6} alt="Watchlist Management 2" />
-                </div>
-            </section>
-
-            <section className="case-study-section">
-                <h2>Search History</h2>
-                <div className="cs-flex-images">
-                    <img src={img7} alt="Search History 1" />
-                    <img src={img8} alt="Search History 2" />
-                </div>
-            </section>
-
-            <section className="case-study-section">
-                <h2>Personalized Recommendations</h2>
-                <div className="cs-flex-images">
-                    <img src={img9} alt="Recommendations 1" />
-                    <img src={img10} alt="Recommendations 2" />
-                </div>
-            </section>
-
-            <section className="case-study-section">
-                <h2>Create New Watchlist</h2>
-                <div className="cs-flex-images">
-                    <img src={img11} alt="Create Watchlist 1" />
-                    <img src={img12} alt="Create Watchlist 2" />
                 </div>
             </section>
 
