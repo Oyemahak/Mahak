@@ -370,3 +370,226 @@
 .amazon-case-study .cs-flex-images img {
   transition: none; /* Disable hover zoom for this project */
 }
+
+/* ========================================== */
+/*         Citi Bank Project Specific Styles   */
+/* ========================================== */
+
+.citi-case-study img {
+  border-radius: 8px;
+  box-shadow: none;
+}
+
+/* 🔹 Two Column Responsive Layout */
+.citi-case-study .cs-two-col {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  justify-content: space-between;
+}
+
+.citi-case-study .cs-two-col > div {
+  flex: 1 1 calc(50% - 16px);
+  color: #ccc;
+}
+
+@media (max-width: 768px) {
+  .citi-case-study .cs-two-col {
+    flex-direction: column;
+  }
+
+  .citi-case-study .cs-two-col > div {
+    flex: 1 1 100%;
+  }
+}
+
+/* 🔹 List Styling */
+.citi-case-study .cs-list {
+  padding-left: 18px;
+  line-height: 2.4;
+  color: #ccc;
+}
+
+/* 🔹 Three Column Summary Section */
+.citi-case-study .cs-three-col {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.citi-case-study .cs-three-col > div {
+  flex: 1 1 calc(33.333% - 16px);
+  color: #ccc;
+}
+
+.citi-case-study .cs-three-col h3 {
+  font-size: 18px;
+  color: #fff;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .citi-case-study .cs-three-col {
+    flex-direction: column;
+  }
+
+  .citi-case-study .cs-three-col > div {
+    flex: 1 1 100%;
+  }
+}
+
+/* 🔹 Image Groups (Mockups) */
+.citi-case-study .cs-flex-images {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 16px;
+}
+
+.citi-case-study .cs-flex-images img {
+  width: 48%;
+  max-width: 480px;
+  border-radius: 8px;
+  box-shadow: none;
+}
+
+@media (max-width: 768px) {
+  .citi-case-study .cs-flex-images img {
+    width: 100%;
+  }
+}
+
+/* 🔹 Section Titles & Descriptions */
+.citi-case-study h2 {
+  font-size: 26px;
+  margin-bottom: 24px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.citi-case-study h3 {
+  font-size: 22px;
+  margin-bottom: 16px;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.citi-case-study .project-description {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #cccccc;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.citi-case-study .case-study-section {
+  margin-bottom: 48px;
+  padding: 24px;
+  background-color: transparent;
+  border: 2px dashed #444;
+  border-radius: 8px;
+}
+
+.citi-case-study .case-study-intro {
+  text-align: center;
+  margin-bottom: 48px;
+  color: #ffffff;
+}
+.cs-arrow-grid-3x2 {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-template-rows: repeat(2, auto);
+  gap: 48px 36px;
+  justify-content: center;
+  margin-top: 32px;
+  position: relative;
+}
+
+.cs-arrow-cell {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cs-arrow-cell img {
+  width: auto;
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: none;
+}
+
+
+
+
+
+.cs-arrow-grid-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  margin-top: 32px;
+  align-items: center;
+}
+
+.cs-grid-row {
+  display: grid;
+  grid-template-columns: auto 60px auto;
+  gap: 24px;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.cs-grid-row img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: none;
+}
+
+.cs-arrow-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.arrow-icon {
+  font-size: 28px;
+  color: #ccc;
+}
+
+/* 🔁 Hide/show on breakpoints */
+.desktop-only {
+  display: inline-block;
+}
+.mobile-only {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .cs-arrow-grid-rows {
+    gap: 24px;
+  }
+
+  .cs-grid-row {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .desktop-only {
+    display: none;
+  }
+  .mobile-only {
+    display: inline-block;
+  }
+
+  .cs-grid-row img {
+    width: 100%;
+  }
+}
