@@ -43,7 +43,7 @@ const Projects = () => {
       img: project4,
       title: "Style Sphere",
       desc: "User Research, Wireframing and Prototyping, Usability Testing",
-      route: "/stylesphere",
+      link: "https://www.figma.com/design/ElcB4T9sPcy7yVv1fZLoex/Styleshphere---Interaction-Design?node-id=0-1&t=kBth2aAOiCUj6fNe-1",
     },
     {
       img: project5,
@@ -55,7 +55,7 @@ const Projects = () => {
       img: project6,
       title: "Humber Esports",
       desc: "Heuristic Evaluation, Usability Testing, Affinity Mapping",
-      route: "/humber",
+      link: "https://www.figma.com/proto/WVLZIhxFNq74AdLDYFXozu/Humber-E-Sports---Group-11?page-id=429%3A1772&node-id=651-25648&node-type=FRAME&viewport=2202%2C741%2C0.06&t=AUrt3LUCrploccBq-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=651%3A25648",
     },
   ];
 
@@ -132,7 +132,6 @@ const Projects = () => {
       <div className="projects-grid">
         {projectsToShow.map((project, index) => (
           <div className="project" key={index}>
-            {/* 🧩 Content container that gets blurred on hover */}
             <div className="project-content">
               <img
                 src={project.img}
@@ -143,14 +142,23 @@ const Projects = () => {
             </div>
 
             {/* 👁️ View Project Button */}
-            {project.route && (
+            {project.route ? (
               <button
                 className="view-project-btn"
                 onClick={() => navigate(project.route)}
               >
                 View Project
               </button>
-            )}
+            ) : project.link ? (
+              <a
+                className="view-project-btn"
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View Project
+              </a>
+            ) : null}
           </div>
         ))}
       </div>

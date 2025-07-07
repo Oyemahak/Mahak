@@ -415,6 +415,38 @@
   transition: none;
 }
 
+/* Accenture Case Study Specific Styles */
+.accenture-case-study .cs-grid-row h4 {
+  text-align: center;
+  margin: 15px 0 10px;
+  font-weight: 600;
+}
+
+.accenture-case-study .cs-grid-row h4:contains("Before") {
+  color: #CA3132;
+}
+
+.accenture-case-study .cs-grid-row h4:contains("After") {
+  color: #3C82F6;
+}
+
+.accenture-case-study .cs-grid-row h4:contains("Alternate Option") {
+  color: #ccc;
+}
+
+/* Fallback for browsers that don't support :contains() */
+.accenture-case-study .cs-grid-row h4[class*="before"] {
+  color: #CA3132;
+}
+
+.accenture-case-study .cs-grid-row h4[class*="after"] {
+  color: #3C82F6;
+}
+
+.accenture-case-study .cs-grid-row h4[class*="alternate"] {
+  color: #ccc;
+}
+
 /* ========================================== */
 /*           RESPONSIVE STYLES                */
 /* ========================================== */

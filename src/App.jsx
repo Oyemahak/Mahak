@@ -5,7 +5,7 @@ import Play from './pages/Play';
 import About from './pages/About';
 import Byblos from './pages/projects/Byblos';
 import CitiBank from './pages/projects/CitiBank';
-// import Accenture from './pages/projects/Accenture';
+import Accenture from './pages/projects/Accenture';
 import AmazonPrime from './pages/projects/AmazonPrime';
 
 // 🎮 Mini-games
@@ -26,7 +26,7 @@ function App() {
         {/* 🔸 Project Pages (One by One as Separate Files) */}
         <Route path="/byblos" element={<Byblos />} />
         <Route path="/citi" element={<CitiBank />} />
-        {/* <Route path="/accenture" element={<Accenture />} /> */}
+        <Route path="/accenture" element={<Accenture />} />
         <Route path="/amazonprime" element={<AmazonPrime />} />
         
         {/* 🎮 Mini-Game Routes */}

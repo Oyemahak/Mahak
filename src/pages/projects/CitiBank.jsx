@@ -123,8 +123,8 @@ const CitiBank = () => {
 
       {/* Navigation */}
       <div className="case-study-nav">
-        <a href="/amazon" className="cs-button outline back-btn">
-          <i className="fas fa-arrow-left"></i> Back to Projects
+        <a href="/" className="cs-button outline back-btn">
+          <i className="fas fa-arrow-left"></i> Back to Home
         </a>
         <a href="/byblos" className="cs-button next-btn">
           Next Project <i className="fas fa-arrow-right"></i>

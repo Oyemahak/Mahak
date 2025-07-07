@@ -268,8 +268,8 @@ const AmazonPrime = () => {
 
             {/* Navigation */}
             <div className="case-study-nav">
-                <a href="/citi" className="cs-button outline back-btn">
-                    <i className="fas fa-arrow-left"></i> Back to Citi
+                <a href="/" className="cs-button outline back-btn">
+                    <i className="fas fa-arrow-left"></i> Back to Home
                 </a>
                 <a href="/accenture" className="cs-button next-btn">
                     Next Project <i className="fas fa-arrow-right"></i>
