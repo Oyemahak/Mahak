@@ -1,5 +1,5 @@
 /* ========================================== */
-/*           PROJECTS SECTION STYLING         */
+/*           PROJECTS GRID STYLING            */
 /* ========================================== */
 
 .projects-grid {
@@ -49,7 +49,7 @@
 
 .project p {
   font-size: 18px;
-  color: #ccc
+  color: #ccc;
 }
 
 .view-project-btn {
@@ -77,29 +77,7 @@
 }
 
 /* ========================================== */
-/*           RESPONSIVE PROJECT CARDS         */
-/* ========================================== */
-
-@media (max-width: 992px) {
-  .project {
-    flex: 1 1 calc(50% - 16px);
-  }
-}
-
-@media (max-width: 600px) {
-  .project {
-    flex: 1 1 100%;
-    padding: 16px;
-  }
-
-  .view-project-btn {
-    padding: 10px 20px;
-    font-size: 14px;
-  }
-}
-
-/* ========================================== */
-/*           CASE STUDY PAGE STYLES           */
+/*           CASE STUDY BASE STYLES           */
 /* ========================================== */
 
 .case-study-page {
@@ -108,7 +86,6 @@
   margin: 0 auto;
 }
 
-/* 🔹 Section Layout */
 .case-study-section {
   margin-bottom: 48px;
   padding: 24px;
@@ -116,6 +93,7 @@
   border: 2px dashed #444;
   border-radius: 8px;
 }
+
 .case-study-section-recommendations {
   margin-bottom: 24px;
   padding: 16px;
@@ -129,7 +107,10 @@
   background-color: transparent;
 }
 
-/* 🔹 Section Titles */
+/* ========================================== */
+/*           CASE STUDY TYPOGRAPHY            */
+/* ========================================== */
+
 .case-study-intro h1 {
   font-size: 32px;
   font-weight: 700;
@@ -149,7 +130,6 @@
   text-align: left;
 }
 
-/* 🔹 Details */
 .project-type {
   font-size: 18px;
   color: #999999;
@@ -165,9 +145,22 @@
 }
 
 /* ========================================== */
-/*       💡 Three-Column Responsive Section    */
+/*           LAYOUT COMPONENTS                */
 /* ========================================== */
 
+/* Two Column Layout */
+.cs-two-col {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  justify-content: space-between;
+}
+
+.cs-two-col > div {
+  flex: 1 1 calc(50% - 16px);
+}
+
+/* Three Column Layout */
 .cs-three-col {
   display: flex;
   flex-wrap: wrap;
@@ -187,19 +180,89 @@
   font-weight: 600;
 }
 
-/* 📱 Mobile fallback */
-@media (max-width: 768px) {
-  .cs-three-col {
-    flex-direction: column;
-  }
-
-  .cs-three-col > div {
-    flex: 1 1 100%;
-  }
+/* List Styling */
+.cs-list {
+  padding-left: 18px;
+  line-height: 2.4;
+  color: #ccc;
 }
 
 /* ========================================== */
-/*               Images & Mockups             */
+/*           ARROW GRID LAYOUTS               */
+/* ========================================== */
+
+.cs-arrow-grid-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  margin-top: 32px;
+  align-items: center;
+}
+
+.cs-grid-row {
+  display: grid;
+  grid-template-columns: auto 60px auto;
+  gap: 24px;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.cs-grid-row img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: none;
+}
+
+.cs-arrow-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Arrow Icons */
+.arrow-icon-between {
+  font-size: 32px;
+  color: #444;
+}
+
+.mobile-only.arrow-icon-between {
+  display: none;
+}
+
+.desktop-only.arrow-icon-between {
+  display: inline-block;
+}
+
+/* 3x2 Grid Layout */
+.cs-arrow-grid-3x2 {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-template-rows: repeat(2, auto);
+  gap: 48px 36px;
+  justify-content: center;
+  margin-top: 32px;
+  position: relative;
+}
+
+.cs-arrow-cell {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cs-arrow-cell img {
+  width: auto;
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: none;
+}
+
+/* ========================================== */
+/*           IMAGES & MOCKUPS                 */
 /* ========================================== */
 
 .cs-image {
@@ -226,7 +289,7 @@
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
 }
 
-/* Prototype Hover Buttons */
+/* Mockup Hover Effects */
 .cs-mockup-wrapper {
   position: relative;
   flex: 1 1 48%;
@@ -238,7 +301,6 @@
   display: block;
 }
 
-/* 🔹 Blur + button on hover */
 .cs-mockup-wrapper:hover img {
   filter: blur(2px) brightness(0.6);
 }
@@ -270,7 +332,7 @@
 }
 
 /* ========================================== */
-/*            Case Study Buttons              */
+/*           BUTTONS & NAVIGATION             */
 /* ========================================== */
 
 .prototype-buttons,
@@ -321,7 +383,7 @@
 }
 
 /* ========================================== */
-/*              Horizontal Divider            */
+/*           UTILITY COMPONENTS               */
 /* ========================================== */
 
 .separator {
@@ -331,247 +393,40 @@
   margin: 48px auto;
 }
 
-/* ========================================== */
-/*         Amazon Project Specific Styles      */
-/* ========================================== */
-
-.amazon-case-study img {
-  border-radius: 8px;
-  box-shadow: none;
+.desktop-only {
+  display: inline-block;
 }
 
-.amazon-case-study .cs-two-col {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 32px;
-  justify-content: space-between;
-}
-
-.amazon-case-study .cs-two-col > div {
-  flex: 1 1 calc(50% - 16px);
-}
-
-@media (max-width: 768px) {
-  .amazon-case-study .cs-two-col {
-    flex-direction: column;
-  }
-
-  .amazon-case-study .cs-two-col > div {
-    flex: 1 1 100%;
-  }
-}
-
-.amazon-case-study .cs-list {
-  padding-left: 18px;
-  line-height: 2.4;
-  color: #ccc;
-}
-
-.amazon-case-study .cs-flex-images img {
-  transition: none; /* Disable hover zoom for this project */
+.mobile-only {
+  display: none;
 }
 
 /* ========================================== */
-/*         Citi Bank Project Specific Styles   */
+/*           PROJECT-SPECIFIC STYLES          */
 /* ========================================== */
 
+.amazon-case-study img,
 .citi-case-study img {
   border-radius: 8px;
   box-shadow: none;
 }
 
-/* 🔹 Two Column Responsive Layout */
-.citi-case-study .cs-two-col {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 32px;
-  justify-content: space-between;
+.amazon-case-study .cs-flex-images img {
+  transition: none;
 }
 
-.citi-case-study .cs-two-col > div {
-  flex: 1 1 calc(50% - 16px);
-  color: #ccc;
+/* ========================================== */
+/*           RESPONSIVE STYLES                */
+/* ========================================== */
+
+@media (max-width: 992px) {
+  .project {
+    flex: 1 1 calc(50% - 16px);
+  }
 }
 
 @media (max-width: 768px) {
-  .citi-case-study .cs-two-col {
-    flex-direction: column;
-  }
-
-  .citi-case-study .cs-two-col > div {
-    flex: 1 1 100%;
-  }
-}
-
-/* 🔹 List Styling */
-.citi-case-study .cs-list {
-  padding-left: 18px;
-  line-height: 2.4;
-  color: #ccc;
-}
-
-/* 🔹 Three Column Summary Section */
-.citi-case-study .cs-three-col {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 24px;
-}
-
-.citi-case-study .cs-three-col > div {
-  flex: 1 1 calc(33.333% - 16px);
-  color: #ccc;
-}
-
-.citi-case-study .cs-three-col h3 {
-  font-size: 18px;
-  color: #fff;
-  margin-bottom: 8px;
-  font-weight: 600;
-}
-
-@media (max-width: 768px) {
-  .citi-case-study .cs-three-col {
-    flex-direction: column;
-  }
-
-  .citi-case-study .cs-three-col > div {
-    flex: 1 1 100%;
-  }
-}
-
-/* 🔹 Image Groups (Mockups) */
-.citi-case-study .cs-flex-images {
-  display: flex;
-  gap: 24px;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-top: 16px;
-}
-
-.citi-case-study .cs-flex-images img {
-  width: 48%;
-  max-width: 480px;
-  border-radius: 8px;
-  box-shadow: none;
-}
-
-@media (max-width: 768px) {
-  .citi-case-study .cs-flex-images img {
-    width: 100%;
-  }
-}
-
-/* 🔹 Section Titles & Descriptions */
-.citi-case-study h2 {
-  font-size: 26px;
-  margin-bottom: 24px;
-  text-align: center;
-  color: #ffffff;
-}
-
-.citi-case-study h3 {
-  font-size: 22px;
-  margin-bottom: 16px;
-  color: #ffffff;
-  font-weight: 700;
-}
-
-.citi-case-study .project-description {
-  font-size: 18px;
-  line-height: 1.8;
-  color: #cccccc;
-  max-width: 1000px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.citi-case-study .case-study-section {
-  margin-bottom: 48px;
-  padding: 24px;
-  background-color: transparent;
-  border: 2px dashed #444;
-  border-radius: 8px;
-}
-
-.citi-case-study .case-study-intro {
-  text-align: center;
-  margin-bottom: 48px;
-  color: #ffffff;
-}
-.cs-arrow-grid-3x2 {
-  display: grid;
-  grid-template-columns: repeat(3, auto);
-  grid-template-rows: repeat(2, auto);
-  gap: 48px 36px;
-  justify-content: center;
-  margin-top: 32px;
-  position: relative;
-}
-
-.cs-arrow-cell {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.cs-arrow-cell img {
-  width: auto;
-  max-width: 100%;
-  border-radius: 8px;
-  box-shadow: none;
-}
-
-
-
-
-
-.cs-arrow-grid-rows {
-  display: flex;
-  flex-direction: column;
-  gap: 48px;
-  margin-top: 32px;
-  align-items: center;
-}
-
-.cs-grid-row {
-  display: grid;
-  grid-template-columns: auto 60px auto;
-  gap: 24px;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  max-width: 1200px;
-}
-
-.cs-grid-row img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
-  box-shadow: none;
-}
-
-.cs-arrow-center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.arrow-icon {
-  font-size: 28px;
-  color: #ccc;
-}
-
-/* 🔁 Hide/show on breakpoints */
-.desktop-only {
-  display: inline-block;
-}
-.mobile-only {
-  display: none;
-}
-
-@media (max-width: 768px) {
+  /* Arrow Grids */
   .cs-arrow-grid-rows {
     gap: 24px;
   }
@@ -582,14 +437,42 @@
     gap: 16px;
   }
 
-  .desktop-only {
-    display: none;
-  }
-  .mobile-only {
+  .mobile-only.arrow-icon-between {
     display: inline-block;
   }
+  
+  .desktop-only.arrow-icon-between {
+    display: none;
+  }
 
-  .cs-grid-row img {
+  /* Layout Adjustments */
+  .cs-three-col {
+    flex-direction: column;
+  }
+
+  .cs-three-col > div,
+  .cs-two-col > div,
+  .amazon-case-study .cs-two-col > div,
+  .citi-case-study .cs-two-col > div {
+    flex: 1 1 100%;
+  }
+
+  /* Image Groups */
+  .cs-grid-row img,
+  .cs-flex-images img,
+  .citi-case-study .cs-flex-images img {
     width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .project {
+    flex: 1 1 100%;
+    padding: 16px;
+  }
+
+  .view-project-btn {
+    padding: 10px 20px;
+    font-size: 14px;
   }
 }

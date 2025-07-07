@@ -153,54 +153,90 @@ const AmazonPrime = () => {
                     <p>During usability testing, we create scenarios that mimic real-life situations to guide users in interacting with the product. These scenarios are like scripts that help users understand what tasks they need to perform. By doing this, we can observe how well the product works for them and whether it meets their needs. This process helps us gather valuable feedback to improve the product and make it more user-friendly</p>
                 </div>
 
-                {/* Image Sections */}
-                <section className="case-study-section-recommendations">
-                    <h2>Content Listing</h2>
-                    <div className="cs-flex-images">
-                        <img src={img1} alt="Content Listing 1" />
-                        <img src={img2} alt="Content Listing 2" />
-                    </div>
-                </section>
+{/* Image Sections */}
+<section className="case-study-section-recommendations">
+  <h2>Content Listing</h2>
+  <div className="cs-arrow-grid-rows">
+    <div className="cs-grid-row">
+      <img src={img1} alt="Content Listing 1" />
+      <div className="cs-arrow-center">
+        <i className="fa-solid fa-arrow-right arrow-icon-between desktop-only"></i>
+        <i className="fa-solid fa-arrow-down arrow-icon-between mobile-only"></i>
+      </div>
+      <img src={img2} alt="Content Listing 2" />
+    </div>
+  </div>
+</section>
 
-                <section className="case-study-section-recommendations">
-                    <h2>Content Details</h2>
-                    <div className="cs-flex-images">
-                        <img src={img3} alt="Content Details 1" />
-                        <img src={img4} alt="Content Details 2" />
-                    </div>
-                </section>
+<section className="case-study-section-recommendations">
+  <h2>Content Details</h2>
+  <div className="cs-arrow-grid-rows">
+    <div className="cs-grid-row">
+      <img src={img3} alt="Content Details 1" />
+      <div className="cs-arrow-center">
+        <i className="fa-solid fa-arrow-right arrow-icon-between desktop-only"></i>
+        <i className="fa-solid fa-arrow-down arrow-icon-between mobile-only"></i>
+      </div>
+      <img src={img4} alt="Content Details 2" />
+    </div>
+  </div>
+</section>
 
-                <section className="case-study-section-recommendations">
-                    <h2>Watchlist Management</h2>
-                    <div className="cs-flex-images">
-                        <img src={img5} alt="Watchlist Management 1" />
-                        <img src={img6} alt="Watchlist Management 2" />
-                    </div>
-                </section>
+<section className="case-study-section-recommendations">
+  <h2>Watchlist Management</h2>
+  <div className="cs-arrow-grid-rows">
+    <div className="cs-grid-row">
+      <img src={img5} alt="Watchlist Management 1" />
+      <div className="cs-arrow-center">
+        <i className="fa-solid fa-arrow-right arrow-icon-between desktop-only"></i>
+        <i className="fa-solid fa-arrow-down arrow-icon-between mobile-only"></i>
+      </div>
+      <img src={img6} alt="Watchlist Management 2" />
+    </div>
+  </div>
+</section>
 
-                <section className="case-study-section-recommendations">
-                    <h2>Search History</h2>
-                    <div className="cs-flex-images">
-                        <img src={img7} alt="Search History 1" />
-                        <img src={img8} alt="Search History 2" />
-                    </div>
-                </section>
+<section className="case-study-section-recommendations">
+  <h2>Search History</h2>
+  <div className="cs-arrow-grid-rows">
+    <div className="cs-grid-row">
+      <img src={img7} alt="Search History 1" />
+      <div className="cs-arrow-center">
+        <i className="fa-solid fa-arrow-right arrow-icon-between desktop-only"></i>
+        <i className="fa-solid fa-arrow-down arrow-icon-between mobile-only"></i>
+      </div>
+      <img src={img8} alt="Search History 2" />
+    </div>
+  </div>
+</section>
 
-                <section className="case-study-section-recommendations">
-                    <h2>Personalized Recommendations</h2>
-                    <div className="cs-flex-images">
-                        <img src={img9} alt="Recommendations 1" />
-                        <img src={img10} alt="Recommendations 2" />
-                    </div>
-                </section>
+<section className="case-study-section-recommendations">
+  <h2>Personalized Recommendations</h2>
+  <div className="cs-arrow-grid-rows">
+    <div className="cs-grid-row">
+      <img src={img9} alt="Recommendations 1" />
+      <div className="cs-arrow-center">
+        <i className="fa-solid fa-arrow-right arrow-icon-between desktop-only"></i>
+        <i className="fa-solid fa-arrow-down arrow-icon-between mobile-only"></i>
+      </div>
+      <img src={img10} alt="Recommendations 2" />
+    </div>
+  </div>
+</section>
 
-                <section className="case-study-section-recommendations">
-                    <h2>Create New Watchlist</h2>
-                    <div className="cs-flex-images">
-                        <img src={img11} alt="Create Watchlist 1" />
-                        <img src={img12} alt="Create Watchlist 2" />
-                    </div>
-                </section>
+<section className="case-study-section-recommendations">
+  <h2>Create New Watchlist</h2>
+  <div className="cs-arrow-grid-rows">
+    <div className="cs-grid-row">
+      <img src={img11} alt="Create Watchlist 1" />
+      <div className="cs-arrow-center">
+        <i className="fa-solid fa-arrow-right arrow-icon-between desktop-only"></i>
+        <i className="fa-solid fa-arrow-down arrow-icon-between mobile-only"></i>
+      </div>
+      <img src={img12} alt="Create Watchlist 2" />
+    </div>
+  </div>
+</section>
             </section>
             <section className="case-study-section cs-two-col">
                 <div>
