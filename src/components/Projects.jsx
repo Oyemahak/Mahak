@@ -9,6 +9,12 @@ import project3 from "../assets/images/project3.png";
 import project4 from "../assets/images/project4.png";
 import project5 from "../assets/images/project5.png";
 import project6 from "../assets/images/project6.png";
+import project7 from "../assets/images/project7.png";
+import project8 from "../assets/images/project8.png";
+import project9 from "../assets/images/project9.png";
+import project10 from "../assets/images/project10.png";
+import project11 from "../assets/images/project11.png";
+import project12 from "../assets/images/project12.png";
 
 const Projects = () => {
   const [activeTab, setActiveTab] = useState("ux");
@@ -62,40 +68,40 @@ const Projects = () => {
   // Web Dev Projects List
   const devProjects = [
     {
-      img: project5,
-      title: "CanSTEM CMS",
-      desc: "WordPress Build with Elementor & SEO",
-      route: "/canstem",
+      img: project7,
+      title: "Qronster",
+      desc: "QR Code Generator with Branding and Download",
+      route: "/qronster",
     },
     {
-      img: project5,
-      title: "React Portfolio",
-      desc: "Dark Mode, Weather Themes, Animations",
-      route: "/portfolio",
+      img: project8,
+      title: "SMS",
+      desc: "Admin Dashboard using ASP.NET Core MVC",
+      route: "/schoolsystem",
     },
     {
-      img: project5,
-      title: "Google StopAlarm",
-      desc: "Geolocation Alert Using Leaflet.js",
-      route: "/stopalarm",
+      img: project9,
+      title: "OyeClicker Extension",
+      desc: "Chrome SEO CTR Simulator using JavaScript",
+      route: "/oyeclicker",
     },
     {
-      img: project5,
-      title: "Ecommerce CMS",
-      desc: "Node.js, Express, MongoDB Admin Panel",
-      route: "/ecommerce",
+      img: project10,
+      title: "Dazzling Smile",
+      desc: "Client Website Built with WordPress & Elementor",
+      route: "/dazzlingsmile",
     },
     {
-      img: project5,
-      title: "Game Dash UI",
-      desc: "React App for Game Score Management",
-      route: "/gamedash",
+      img: project11,
+      title: "Admin CMS Panel",
+      desc: "Express + MongoDB CMS to Manage Portfolio Data",
+      route: "/admincms",
     },
     {
-      img: project5,
-      title: "Accenture 🔒",
-      desc: "Front-End Development, Heuristic Evaluation, Prototyping",
-      route: "/accenture",
+      img: project12,
+      title: "Vibe Coding",
+      desc: "Built in 2 hours with AI: Match Emoji Game",
+      route: "/vibecoding",
     },
   ];
 
