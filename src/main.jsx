@@ -22,6 +22,7 @@ import './styles/rain-theme.css';
 import './styles/theme-effects.css';
 import './styles/projects.css';
 import './styles/webProjects.css';
+import './styles/trash.css';
 
 // ✅ Theme & interaction scripts for rain, moon, snow, etc.
 import './js/main.js';

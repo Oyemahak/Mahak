@@ -5,6 +5,7 @@ import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import Play from './pages/Play';
 import About from './pages/About';
+import NotFound from "./pages/NotFound";
 
 // 🎨 UX Case Study Pages
 import Byblos from './pages/projects/Byblos';
@@ -34,6 +35,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/play" element={<Play />} />
         <Route path="/about" element={<About />} />
+        <Route path="*" element={<NotFound />} />
 
         {/* 🎨 UX Case Study Routes */}
         <Route path="/byblos" element={<Byblos />} />
