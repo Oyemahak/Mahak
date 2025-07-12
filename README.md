@@ -2,7 +2,7 @@
 
 **"I didn’t just rebuild it—I Reactified it. Better, faster, and still kinda funny."**
 
-🌐 [Live Site](https://mahak.vercel.app/) | ⚛️ Built with **React + Vite** | 🎮 Mini-Games Included!
+🌐 [Live Site](https://oyemahak.github.io/mahak/) | ⚛️ Built with **React + Vite** | 🎮 Mini-Games Included!
 
 ---
 
@@ -49,7 +49,7 @@
 ## 🚀 Running This Locally
 
 ```bash
-git clone https://github.com/oyemahak/devfolio-react.git
+git clone https://github.com/oyemahak/mahak.git
 cd devfolio-react
 npm install
 npm run dev
