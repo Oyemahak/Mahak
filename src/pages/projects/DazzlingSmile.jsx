@@ -15,17 +15,14 @@ const DazzlingSmile = () => {
       </section>
 
       <section className="case-study-section">
-        <h3>🔧 Key Features</h3>
+        <h3>Key Features</h3>
         <ul className="project-list">
           <li>WordPress + Elementor build</li>
           <li>Mobile-optimized and SEO-ready</li>
           <li>Appointment integration</li>
           <li>Custom styling for clinic brand</li>
         </ul>
-      </section>
-
-      <section className="case-study-section">
-        <h3>🔗 Links</h3>
+        <h3>Links</h3>
         <a
           className="button-glass"
           href="https://dazzlingsmile.ca/"
@@ -43,6 +40,16 @@ const DazzlingSmile = () => {
           🎨 Figma Design
         </a>
       </section>
+
+      {/* ↩️ Navigation */}
+      <div className="case-study-nav">
+        <a href="/" className="cs-button outline back-btn">
+          <i className="fas fa-arrow-left"></i> Back to Home
+        </a>
+        <a href="/admincms" className="cs-button next-btn">
+          Next Project <i className="fas fa-arrow-right"></i>
+        </a>
+      </div>
 
       <div className="separator"></div>
       <Footer />

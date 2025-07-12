@@ -7,7 +7,7 @@ const AdminCMS = () => {
   return (
     <main className="case-study-page">
       <section className="case-study-intro">
-        <h1>🧰 Admin CMS Panel – Portfolio Backend</h1>
+        <h1>Admin CMS Panel – Portfolio Backend</h1>
         <p className="project-type">Personal CMS · Node + MongoDB</p>
         <p className="project-description">
           A custom CMS built with Node.js, Express, MongoDB Atlas, and Pug to manage portfolio data (Skills and Messages) with authentication, live email notifications, and trash system for contact form.
@@ -15,17 +15,13 @@ const AdminCMS = () => {
       </section>
 
       <section className="case-study-section">
-        <h3>🔧 Key Features</h3>
+        <h3>Key Features</h3>
         <ul className="project-list">
           <li>CRUD for Skills and Messages</li>
           <li>Pug-based responsive admin UI</li>
           <li>Trash system + inline comments</li>
           <li>Nodemailer + MongoDB Atlas</li>
         </ul>
-      </section>
-
-      <section className="case-study-section">
-        <h3>🔗 Links</h3>
         <a
           className="button-glass"
           href="https://admin-dashboard-mahak.onrender.com"
@@ -43,6 +39,16 @@ const AdminCMS = () => {
           💻 View Code
         </a>
       </section>
+
+      {/* ↩️ Navigation */}
+      <div className="case-study-nav">
+        <a href="/" className="cs-button outline back-btn">
+          <i className="fas fa-arrow-left"></i> Back to Home
+        </a>
+        <a href="/vibecoding" className="cs-button next-btn">
+          Next Project <i className="fas fa-arrow-right"></i>
+        </a>
+      </div>
 
       <div className="separator"></div>
       <Footer />

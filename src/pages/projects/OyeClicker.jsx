@@ -7,7 +7,7 @@ const OyeClicker = () => {
   return (
     <main className="case-study-page">
       <section className="case-study-intro">
-        <h1>🔍 OyeClicker – SEO CTR Simulator Extension</h1>
+        <h1>OyeClicker – SEO CTR Simulator Extension</h1>
         <p className="project-type">Browser Extension · JavaScript</p>
         <p className="project-description">
           OyeClicker simulates realistic user behavior to test organic search result rankings. It mimics delayed clicks, keyword entry, and user scrolling on Google search pages.
@@ -15,17 +15,14 @@ const OyeClicker = () => {
       </section>
 
       <section className="case-study-section">
-        <h3>🔧 Key Features</h3>
+        <h3>Key Features</h3>
         <ul className="project-list">
           <li>Google-style search result interaction</li>
           <li>Delay-based and randomized CTR simulation</li>
           <li>Keyword injection and click tracking</li>
           <li>Chrome Extension Manifest v3</li>
         </ul>
-      </section>
-
-      <section className="case-study-section">
-        <h3>🔗 Links</h3>
+        <h3>Links</h3>
         <a
           className="button-glass"
           href="https://github.com/Oyemahak/OyeClicker"
@@ -43,6 +40,16 @@ const OyeClicker = () => {
           🎨 Figma Flow
         </a>
       </section>
+
+      {/* ↩️ Navigation */}
+      <div className="case-study-nav">
+        <a href="/" className="cs-button outline back-btn">
+          <i className="fas fa-arrow-left"></i> Back to Home
+        </a>
+        <a href="/dazzlingsmile" className="cs-button next-btn">
+          Next Project <i className="fas fa-arrow-right"></i>
+        </a>
+      </div>
 
       <div className="separator"></div>
       <Footer />

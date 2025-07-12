@@ -4,7 +4,6 @@
   padding: 64px 24px 40px;
   color: #e0e0e0;
   font-family: 'Open Sans', sans-serif;
-  line-height: 1.7;
 }
 
 .case-study-intro {
@@ -47,9 +46,9 @@
 }
 
 .project-list li {
-  padding-left: 1.2rem;
+  padding-left: 1.6rem;
   position: relative;
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.8rem;
 }
 
 .project-list li::before {
@@ -65,7 +64,7 @@
   display: inline-block;
   margin-right: 1rem;
   margin-top: 1rem;
-  padding: 10px 18px;
+  padding: 10px 20px;
   border-radius: 8px;
   font-weight: 500;
   text-decoration: none;
@@ -80,6 +79,42 @@
   background: rgba(0, 255, 200, 0.12);
   border-color: rgba(0, 255, 200, 0.5);
   color: #00ffc8;
+}
+
+/* 🔙 Back & Next Navigation Buttons */
+.case-study-nav {
+  display: flex;
+  justify-content: space-between;
+  margin: 3rem 0 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.cs-button {
+  background-color: #1e1e1e;
+  color: #ffffff;
+  padding: 12px 24px;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.cs-button:hover {
+  background-color: #333333;
+}
+
+.cs-button.outline {
+  border: 1px solid #ffffff;
+  background: transparent;
+}
+
+/* Divider */
+.separator {
+  margin-top: 60px;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.06);
 }
 
 .separator {
@@ -102,9 +137,15 @@
     font-size: 1rem;
   }
 
+  .cs-button {
+    width: 100%;
+    text-align: center;
+  }
+
   .button-glass {
     display: block;
     width: 100%;
+    padding: 10px 0px;
     margin-top: 12px;
     text-align: center;
   }

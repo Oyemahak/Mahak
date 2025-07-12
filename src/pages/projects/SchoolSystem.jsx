@@ -15,25 +15,16 @@ const SchoolSystem = () => {
       </section>
 
       <section className="case-study-section">
-        <h3>🔧 Key Features</h3>
+        <h3>Key Features</h3>
         <ul className="project-list">
-          <li>✅ Code-first database with Entity Framework Core</li>
-          <li>✅ Full CRUD for Students, Courses & Enrollments</li>
-          <li>✅ ASP.NET Identity-based authentication</li>
-          <li>✅ RESTful APIs with Swagger documentation</li>
-          <li>✅ MVC architecture and Bootstrap-based UI</li>
-          <li>✅ DTOs for secure and efficient API responses</li>
+          <li>Code-first database with Entity Framework Core</li>
+          <li>Full CRUD for Students, Courses & Enrollments</li>
+          <li>ASP.NET Identity-based authentication</li>
+          <li>RESTful APIs with Swagger documentation</li>
+          <li>MVC architecture and Bootstrap-based UI</li>
+          <li>DTOs for secure and efficient API responses</li>
         </ul>
-      </section>
-
-      {/* Optional Video Placeholder */}
-      {/* <section className="case-study-section">
-        <h3>📹 Demo Walkthrough</h3>
-        <p>Watch the 5-minute demo (Coming soon)</p>
-      </section> */}
-
-      <section className="case-study-section">
-        <h3>💻 GitHub Repository</h3>
+        <h3>GitHub Repository</h3>
         <a
           className="button-glass"
           href="https://github.com/Oyemahak/school-management"
@@ -43,6 +34,22 @@ const SchoolSystem = () => {
           🔗 View Full Source Code
         </a>
       </section>
+
+      {/* Optional Video Placeholder */}
+      {/* <section className="case-study-section">
+        <h3>📹 Demo Walkthrough</h3>
+        <p>Watch the 5-minute demo (Coming soon)</p>
+      </section> */}
+
+      {/* ↩️ Navigation */}
+      <div className="case-study-nav">
+        <a href="/" className="cs-button outline back-btn">
+          <i className="fas fa-arrow-left"></i> Back to Home
+        </a>
+        <a href="/oyeclicker" className="cs-button next-btn">
+          Next Project <i className="fas fa-arrow-right"></i>
+        </a>
+      </div>
 
       <div className="separator"></div>
       <Footer />
