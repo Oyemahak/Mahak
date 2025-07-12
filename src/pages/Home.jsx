@@ -29,7 +29,7 @@ function Home() {
             </p>
 
             <div className="tooltip-bottom">
-              <a href={`${base}assets/images/Mahak_Patel_Resume.pdf`} target="_blank" rel="noopener noreferrer">
+              <a href="/Mahak_Patel_Resume.pdf" target="_blank" rel="noopener noreferrer">
                 <button className="resume-button">Resume</button>
               </a>
               <span className="tooltiptext-bottom">

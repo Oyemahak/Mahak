@@ -126,7 +126,7 @@ const CitiBank = () => {
         <a href="/" className="cs-button outline back-btn">
           <i className="fas fa-arrow-left"></i> Back to Home
         </a>
-        <a href="/byblos" className="cs-button next-btn">
+        <a href="/amazonprime" className="cs-button next-btn">
           Next Project <i className="fas fa-arrow-right"></i>
         </a>
       </div>
